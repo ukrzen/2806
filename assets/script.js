@@ -21,7 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 const titleElement = document.getElementById('title');
                 const descriptionElement = document.getElementById('description');
-
+                titleElement.classList.remove('small');
+                titleElement.classList.remove('smaller');
+                if(data.title.length > 200 && data.title.length < 360) {
+                    titleElement.classList.add('smaller');
+                } else if(data.title.length >= 360) {
+                    titleElement.classList.add('small');
+                }
                 titleElement.innerText = '';
                 descriptionElement.innerText = '';
                 descriptionElement.classList.remove('visible');
@@ -57,19 +63,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 index++;
                 window.typeWriterTimeout =  setTimeout(typeWriter, speed);
             } else {
-                // Remove cursor effect after text is written
                 element.classList.remove('typing-cursor');
                 callback();
             }
         }
-
-        // Add cursor effect class
         element.classList.add('typing-cursor');
 
         typeWriter();
     }
 
-    // Event listener for random article button
     document.getElementById('random-article-btn').addEventListener('click', () => {
         fetchArticle();
     });

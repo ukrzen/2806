@@ -62,7 +62,7 @@ body {
 
 #title {
     font-family: 'e-Ukraine Head', "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 4vh;
+    font-size: 3vh;
     font-weight: bold;
     text-align: left;
     padding-left: 40px;
@@ -122,9 +122,17 @@ button {
     padding: 10px;
     margin-bottom: 10px;
     transition: opacity 0.5s ease-in-out;
+    min-width: 40px;
 }
 button:active {
     opacity: 0.8;
+    background-color: #ffffff;
+}
+#title.smaller {
+    font-size: 20px;
+}
+#title.small {
+    font-size: 15px;
 }
 img.ukraine {
     width: 80px;
@@ -148,6 +156,10 @@ img.ukraine {
     #title {
         font-size: 3vh;
     }
+    #title.small {
+        font-size: 14px;
+    }
+
     #description {
         font-size: 14px;
     }
