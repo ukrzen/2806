@@ -148,6 +148,13 @@ img.ukraine {
     width: 80px;
 }
 @media all and (max-width: 767px)  {
+    img.ukraine {
+        width: 65px;
+    }
+    #description,#title {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
     .mobile {
         display: inline;
     }
@@ -183,5 +190,30 @@ img.ukraine {
     button {
         font-size: 16px;
         /*padding: 5px;*/
+    }
+}
+@media (max-width: 300px) {
+    #copy-link-btn {
+       display: none !important;
+    }
+}
+@media (max-width: 360px) {
+    img.ukraine {
+        width: 50px;
+    }
+    #title {
+        font-size: 16px;
+    }
+    .buttons {
+        left:0 !important;
+        right:0 !important;
+    }
+    #toast {
+        left: 0px;
+        right: 0px;
+    }
+    #description, #title{
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
