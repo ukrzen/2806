@@ -81,11 +81,11 @@ body {
 }
 #toast {
     position: fixed;
-    top: 5px;
+    bottom: 130px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #ffffff;
-    border: 4px solid #000000;
+    border: 3px solid #000000;
     padding: 10px;
     font-size: 20px;
     /*font-family: "Courier New", monospace;*/
@@ -104,12 +104,13 @@ body {
 }
 .buttons {
     position: fixed;
-    bottom: 0px;
-    left:0px;
-    right:0px;
-    padding-bottom: 40px;
-    background: rgba(255,255,255,0.8);
-    backdrop-filter: blur(10px);
+    bottom: 0;
+    left:0;
+    right:0;
+    padding-top:10px;
+    padding-bottom: 10px;
+    background: rgba(255,255,255,0.5);
+    /*backdrop-filter: blur(10px);*/
     /*left: 50%;*/
     /*transform: translateX(-50%);*/
     text-align: center;
@@ -119,7 +120,7 @@ button, select {
     /*font-family: 'e-Ukraine' !important;*/
     /*font-family: "Courier New", monospace;*/
     /*font-weight: bold;*/
-    border: 4px solid #000000;
+    border: 3px solid #000000;
     background-color: #ffffff ;
     color: #000000;
     padding: 10px;
@@ -128,6 +129,7 @@ button, select {
     min-width: 48px;
     min-height: 60px;
     border-radius: 0 !important;
+    -webkit-tap-highlight-color: transparent;
 
 }
 select {
@@ -223,4 +225,54 @@ img.ukraine {
         padding-left: 5px;
         padding-right: 5px;
     }
+}
+.dark {
+    display: none;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+       color-scheme: dark;
+    }
+
+    .light {
+        display: none !important;
+    }
+    .dark {
+        display: inline !important;
+    }
+
+    body {
+        background-color: #202124;
+    }
+    button, select {
+        background-color: #424244;
+        color: #e8eaed;
+        border-color:transparent;
+        /*border-color: #e8eaed;*/
+    }
+    #toast {
+        background-color: #202124;
+        color: #e8eaed;
+        border: 3px solid #e8eaed;
+    }
+    .buttons {
+
+        background-color: rgba(32, 33, 36, 0.8);
+    }
+    #description {
+        color: #e8eaed;
+    }
+    #title {
+        color: #e8eaed;
+    }
+    button path {
+        fill: #e8eaed;
+    }
+    button:active, button:active path {
+        background-color: #e8eaed;
+        color:#202124;
+        fill:#202124;
+
+    }
+
 }
