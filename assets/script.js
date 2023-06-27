@@ -106,12 +106,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('article-dropdown').addEventListener('change', (event) => {
         fetchArticle(event.target.value);
     });
+
+    createDropdown();
     if (location.hash) {
         let articleNumber = parseInt(location.hash.replace('#', ''));
         fetchArticle(articleNumber);
         return;
     }
-    createDropdown();
     fetchArticle();
 
     // Initial page load

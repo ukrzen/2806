@@ -148,6 +148,7 @@ button:active, button:active path {
 img.ukraine {
     width: 80px;
 }
+
 @media all and (max-width: 767px)  {
     img.ukraine {
         width: 65px;
@@ -193,6 +194,11 @@ img.ukraine {
         /*padding: 5px;*/
     }
 }
+/*@media all and (orientation: landscape) and (max-width: 767px) {*/
+/*    #title {*/
+/*        font-size: 3vw;*/
+/*    }*/
+/*}*/
 @media (max-width: 300px) {
     #copy-link-btn {
        display: none !important;
