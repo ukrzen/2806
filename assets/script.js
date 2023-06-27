@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
-                window.articleId = id;
+                window.articleId = parseInt(id);
                 if(isRandom) {
                     location.hash = "#";
                 }
