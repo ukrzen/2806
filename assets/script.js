@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     descriptionElement.innerHTML = data.description;
                     descriptionElement.classList.add('visible');
                 });
+                document.getElementById('article-dropdown').value = id;
             })
             .catch(error => {
                 console.error('Error fetching article:', error);
@@ -70,7 +71,18 @@ document.addEventListener('DOMContentLoaded', () => {
         element.classList.add('typing-cursor');
 
         typeWriter();
-    }
+    };
+    function createDropdown() {
+        var dropdown = document.getElementById("article-dropdown");
+
+        for (var i = 1; i <= 161; i++) {
+            var option = document.createElement("option");
+            option.text = i;
+            option.value = i;
+            dropdown.appendChild(option);
+        }
+    };
+
 
     document.getElementById('random-article-btn').addEventListener('click', () => {
         fetchArticle();
@@ -80,23 +92,27 @@ document.addEventListener('DOMContentLoaded', () => {
         showToast('Посилання скопійовано!')
     });
     document.getElementById('prev-article-btn').addEventListener('click', () => {
-        if(window.articleId === 1) {
+        if(window.articleId == 1) {
             return;
         }
         fetchArticle(window.articleId - 1);
     });
     document.getElementById('next-article-btn').addEventListener('click', () => {
-        if(window.articleId === 161) {
+        if(window.articleId == 161) {
             return;
         }
         fetchArticle(window.articleId + 1);
+    });
+    document.getElementById('article-dropdown').addEventListener('change', (event) => {
+        fetchArticle(event.target.value);
     });
     if (location.hash) {
         let articleNumber = parseInt(location.hash.replace('#', ''));
         fetchArticle(articleNumber);
         return;
     }
-
+    createDropdown();
     fetchArticle();
+
     // Initial page load
 });

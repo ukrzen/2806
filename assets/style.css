@@ -5,7 +5,9 @@
     font-display: swap;
     src: url('fonts/e-Ukraine-Light.woff2') format('woff2');
 }
-
+* {
+    box-sizing: border-box;
+}
 @font-face {
     font-family: 'e-Ukraine Head';
     font-style: normal;
@@ -111,22 +113,29 @@ body {
     /*transform: translateX(-50%);*/
     text-align: center;
 }
-button {
+button, select {
     font-size:20px;
     /*font-family: 'e-Ukraine' !important;*/
     /*font-family: "Courier New", monospace;*/
     /*font-weight: bold;*/
     border: 4px solid #000000;
-    background-color: #ffffff;
+    background-color: #ffffff ;
     color: #000000;
     padding: 10px;
     margin-bottom: 10px;
     transition: opacity 0.5s ease-in-out;
     min-width: 48px;
+    min-height: 60px;
+
 }
-button:active {
+select {
+    height: 60px !important;
+}
+button:active, button:active path {
     opacity: 0.8;
-    background-color: #ffffff;
+    background-color: black;
+    color:white;
+    fill:white;
 }
 #title.smaller {
     font-size: 20px;
@@ -165,8 +174,8 @@ img.ukraine {
     }
     .buttons {
         /*width:100vh;*/
-        left:40px;
-        right:40px;
+        left:10px;
+        right:10px;
         /*transform:none;*/
         padding-bottom: 10px;
     }
