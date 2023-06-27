@@ -126,6 +126,7 @@ button, select {
     transition: opacity 0.5s ease-in-out;
     min-width: 48px;
     min-height: 60px;
+    border-radius: 0 !important;
 
 }
 select {
