@@ -229,50 +229,50 @@ img.ukraine {
 .dark {
     display: none;
 }
-@media (prefers-color-scheme: dark) {
-    :root {
-       color-scheme: dark;
-    }
+/*@media (prefers-color-scheme: dark) {*/
+/*    :root {*/
+/*       color-scheme: dark;*/
+/*    }*/
 
-    .light {
-        display: none !important;
-    }
-    .dark {
-        display: inline !important;
-    }
+/*    .light {*/
+/*        display: none !important;*/
+/*    }*/
+/*    .dark {*/
+/*        display: inline !important;*/
+/*    }*/
 
-    body {
-        background-color: #202124;
-    }
-    button, select {
-        background-color: #424244;
-        color: #e8eaed;
-        border-color:transparent;
-        /*border-color: #e8eaed;*/
-    }
-    #toast {
-        background-color: #202124;
-        color: #e8eaed;
-        border: 3px solid #e8eaed;
-    }
-    .buttons {
+/*    body {*/
+/*        background-color: #202124;*/
+/*    }*/
+/*    button, select {*/
+/*        background-color: #424244;*/
+/*        color: #e8eaed;*/
+/*        border-color:transparent;*/
+/*        !*border-color: #e8eaed;*!*/
+/*    }*/
+/*    #toast {*/
+/*        background-color: #202124;*/
+/*        color: #e8eaed;*/
+/*        border: 3px solid #e8eaed;*/
+/*    }*/
+/*    .buttons {*/
 
-        background-color: rgba(32, 33, 36, 0.8);
-    }
-    #description {
-        color: #e8eaed;
-    }
-    #title {
-        color: #e8eaed;
-    }
-    button path {
-        fill: #e8eaed;
-    }
-    button:active, button:active path {
-        background-color: #e8eaed;
-        color:#202124;
-        fill:#202124;
+/*        background-color: rgba(32, 33, 36, 0.8);*/
+/*    }*/
+/*    #description {*/
+/*        color: #e8eaed;*/
+/*    }*/
+/*    #title {*/
+/*        color: #e8eaed;*/
+/*    }*/
+/*    button path {*/
+/*        fill: #e8eaed;*/
+/*    }*/
+/*    button:active, button:active path {*/
+/*        background-color: #e8eaed;*/
+/*        color:#202124;*/
+/*        fill:#202124;*/
 
-    }
+/*    }*/
 
-}
+/*}*/
